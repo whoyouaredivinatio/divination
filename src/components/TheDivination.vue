@@ -221,7 +221,6 @@ export default {
       justify-content: center;
       align-items: center;
       width: 100%;
-      max-width: 30%;
 
       .divination-result-img {
         width: 100%;
@@ -266,11 +265,6 @@ export default {
   width: 35px;
   height: 35px;
   margin: 0 10px;
-}
-
-@media screen and (max-width: 900px) {
-  .mobile {
-  }
 }
 
 @media screen and (min-width: 901px) {
