@@ -211,6 +211,7 @@ export default {
   .divination-result {
     margin: 10px 0 60px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
