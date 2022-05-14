@@ -20,15 +20,15 @@
       <div class="divination-notification">✦抽完牌請截圖回傳✦</div>
       <div
         class="divination-result"
-        :class="{ 'flex-column': cardResult.length <= 3 }"
+        :class="{ mobile: cardResult.length <= 3 }"
       >
-        <img
-          class="divination-result-img"
+        <div
+          class="divination-result-imgBox"
           v-for="card in cardResult"
           :key="card"
-          :src="getImgUrl(card)"
-          alt=""
-        />
+        >
+          <img class="divination-result-img" :src="getImgUrl(card)" alt="" />
+        </div>
       </div>
       <div class="divination-footer">
         <a :href="socialMedia.youtube">
@@ -149,7 +149,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .divination {
   margin-top: 30px;
   display: flex;
@@ -207,10 +207,16 @@ export default {
     align-items: center;
     flex-wrap: wrap;
     flex: 1 1 200px;
-
-    .divination-result-img {
+    .divination-result-imgBox {
       margin: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       max-width: 30%;
+
+      .divination-result-img {
+        width: 100%;
+      }
     }
   }
 }
@@ -241,9 +247,9 @@ export default {
   align-items: center;
 }
 
-.flex-column {
+.mobile {
   flex-direction: column;
-  img {
+  .divination-result-imgBox {
     max-width: 80% !important;
   }
 }
@@ -254,11 +260,17 @@ export default {
   margin: 0 10px;
 }
 
-@media screen and (min-width: 769px) {
-  .flex-column {
+@media screen and (max-width: 900px) {
+  .mobile {
+    flex-direction: column !important;
+  }
+}
+
+@media screen and (min-width: 901px) {
+  .mobile {
     flex-direction: row;
 
-    img {
+    .divination-result-imgBox {
       max-width: 30% !important;
     }
   }
