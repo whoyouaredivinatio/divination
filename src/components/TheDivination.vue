@@ -267,7 +267,7 @@ export default {
   margin: 0 10px;
 }
 
-@media screen and (min-width: 901px) {
+@media only screen and (min-width: 901px) {
   .mobile {
     flex-direction: row;
 
