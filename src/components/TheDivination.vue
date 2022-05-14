@@ -272,4 +272,11 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: 450px) {
+  .divination-dialog {
+    width: 80%;
+    font-size: 14px;
+  }
+}
 </style>
