@@ -20,6 +20,7 @@
       <div class="divination-notification">✦抽完牌請截圖回傳✦</div>
       <div
         class="divination-result"
+        :style="{ 'flex-direction': isColumn }"
         :class="{ mobile: cardResult.length <= 3 }"
       >
         <div
@@ -144,6 +145,14 @@ export default {
     },
     getImgUrl(pic) {
       return require("../assets/divination-card/" + pic + ".png");
+    },
+  },
+  computed: {
+    isColumn() {
+      if (this.cardResult.length <= 3) {
+        return "column";
+      }
+      return "row";
     },
   },
 };
