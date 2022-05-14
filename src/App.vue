@@ -35,4 +35,9 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+html,
+body {
+  width: 100vw;
+}
 </style>
