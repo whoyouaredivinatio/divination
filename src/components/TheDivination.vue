@@ -211,7 +211,7 @@ export default {
   .divination-result {
     margin: 10px 0 60px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -222,6 +222,7 @@ export default {
       justify-content: center;
       align-items: center;
       width: 100%;
+      max-width: 30% !important;
 
       .divination-result-img {
         width: 100%;
@@ -256,25 +257,9 @@ export default {
   align-items: center;
 }
 
-.mobile {
-  .divination-result-imgBox {
-    max-width: 80% !important;
-  }
-}
-
 .socialMedia-link {
   width: 35px;
   height: 35px;
   margin: 0 10px;
-}
-
-@media only screen and (min-width: 901px) {
-  .mobile {
-    flex-direction: row;
-
-    .divination-result-imgBox {
-      max-width: 30% !important;
-    }
-  }
 }
 </style>
