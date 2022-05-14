@@ -81,9 +81,9 @@
           <div>想完之後請按下【確認】</div>
         </q-card-section>
         <q-card-actions align="right">
-          <q-btn label="取消" color="primary" v-close-popup />
+          <q-btn label="再想想" color="primary" v-close-popup />
           <q-btn
-            label="確認"
+            label="抽起來"
             color="primary"
             @click="randomPick"
             v-close-popup
@@ -261,5 +261,15 @@ export default {
   width: 35px;
   height: 35px;
   margin: 0 10px;
+}
+
+@media screen and (min-width: 900px) {
+  .divination {
+    .divination-logo {
+      img {
+        max-width: 40%;
+      }
+    }
+  }
 }
 </style>
