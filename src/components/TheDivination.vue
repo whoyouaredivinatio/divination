@@ -31,41 +31,43 @@
         </div>
       </div>
       <div class="divination-footer">
-        <a :href="socialMedia.youtube">
-          <img
-            class="socialMedia-link"
-            src="../assets/socialMedia/icon-yt.png"
-            alt=""
-          />
-        </a>
-        <a :href="socialMedia.line">
-          <img
-            class="socialMedia-link"
-            src="../assets/socialMedia/icon-line.png"
-            alt=""
-          />
-        </a>
-        <a :href="socialMedia.instagram">
-          <img
-            class="socialMedia-link"
-            src="../assets/socialMedia/icon-ig.png"
-            alt=""
-          />
-        </a>
-        <a :href="socialMedia.facebook">
-          <img
-            class="socialMedia-link"
-            src="../assets/socialMedia/icon-fb.png"
-            alt=""
-          />
-        </a>
-        <a :href="socialMedia.podcast">
-          <img
-            class="socialMedia-link"
-            src="../assets/socialMedia/icon-podcast.png"
-            alt=""
-          />
-        </a>
+        <div class="divination-footerBox">
+          <a :href="socialMedia.youtube">
+            <img
+              class="socialMedia-link"
+              src="../assets/socialMedia/icon-yt.png"
+              alt=""
+            />
+          </a>
+          <a :href="socialMedia.line">
+            <img
+              class="socialMedia-link"
+              src="../assets/socialMedia/icon-line.png"
+              alt=""
+            />
+          </a>
+          <a :href="socialMedia.instagram">
+            <img
+              class="socialMedia-link"
+              src="../assets/socialMedia/icon-ig.png"
+              alt=""
+            />
+          </a>
+          <a :href="socialMedia.facebook">
+            <img
+              class="socialMedia-link"
+              src="../assets/socialMedia/icon-fb.png"
+              alt=""
+            />
+          </a>
+          <a :href="socialMedia.podcast">
+            <img
+              class="socialMedia-link"
+              src="../assets/socialMedia/icon-podcast.png"
+              alt=""
+            />
+          </a>
+        </div>
       </div>
     </div>
     <q-dialog
@@ -143,7 +145,7 @@ export default {
       this.cardResult = result;
     },
     getImgUrl(pic) {
-      return require("../assets/divination-card/" + pic + ".png");
+      return require("../assets/divination-card/" + pic + ".jpg");
     },
   },
   computed: {
@@ -159,6 +161,7 @@ export default {
 
 <style lang="scss" scoped>
 .divination {
+  overflow-x: hidden;
   margin-top: 30px;
   display: flex;
   flex-direction: column;
@@ -215,7 +218,7 @@ export default {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    flex: 1 1 200px;
+
     .divination-result-imgBox {
       margin: 5px;
       display: flex;
@@ -255,6 +258,10 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  .divination-footerBox {
+    margin-top: 6px;
+  }
 }
 
 .socialMedia-link {
