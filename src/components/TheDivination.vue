@@ -63,7 +63,7 @@
     >
       <q-card class="divination-dialog">
         <q-card-section>
-          <div>請心中請想著問題</div>
+          <div>請心中想著你的問題</div>
           <div>(有指定對象或事物也請一起想著)</div>
           <div>想完之後請按下【抽起來】</div>
         </q-card-section>
