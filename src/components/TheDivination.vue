@@ -1,11 +1,11 @@
 <template>
   <div class="divination">
     <div class="divination-logo">
-      <img src="../assets/logo.jpg" alt="" />
+      <img src="../assets/logo.gif" alt="" />
     </div>
     <div class="divination-content">
       <div class="divination-inputText">
-        我只是想抽
+        我要抽
         <input
           class="divination-input"
           v-model="inputCardNum"
@@ -37,19 +37,11 @@
               class="socialMedia-link"
               src="../assets/socialMedia/icon-yt.png"
               alt=""
-            />
-          </a>
-          <a :href="socialMedia.line">
+            /> </a
+          ><a :href="socialMedia.twitter">
             <img
               class="socialMedia-link"
-              src="../assets/socialMedia/icon-line.png"
-              alt=""
-            />
-          </a>
-          <a :href="socialMedia.instagram">
-            <img
-              class="socialMedia-link"
-              src="../assets/socialMedia/icon-ig.png"
+              src="../assets/socialMedia/icon-tw.png"
               alt=""
             />
           </a>
@@ -57,13 +49,6 @@
             <img
               class="socialMedia-link"
               src="../assets/socialMedia/icon-fb.png"
-              alt=""
-            />
-          </a>
-          <a :href="socialMedia.podcast">
-            <img
-              class="socialMedia-link"
-              src="../assets/socialMedia/icon-podcast.png"
               alt=""
             />
           </a>
@@ -105,11 +90,9 @@ export default {
       isDialogShow: false,
       cardResult: [],
       socialMedia: {
-        youtube: "https://www.youtube.com/channel/UCqoThkmy2Jc0UwdZYklDVFw",
-        line: "https://line.me/R/ti/p/%40373nokcl",
-        instagram: "https://www.instagram.com/whoyouare_divination/",
-        facebook: "https://www.facebook.com/whoyouare.divination",
-        podcast: "https://open.firstory.me/user/whoyouaredivination/platforms",
+        youtube: "https://www.youtube.com/channel/UCXqEvZGP5_KWzD6nCSSCUsQ",
+        facebook: "https://www.facebook.com/profile.php?id=100084147997702",
+        twitter: "https://twitter.com/OoniauNuannuan",
       },
     };
   },
@@ -174,7 +157,7 @@ export default {
     align-items: center;
 
     img {
-      max-width: 70%;
+      max-width: 20%;
       overflow: hidden;
     }
   }
@@ -188,13 +171,18 @@ export default {
 
     .divination-inputText {
       display: flex;
-      color: #f5c03f;
+      color: #f5d269;
+      font-weight: bold;
       font-size: 1.5rem;
 
       .divination-input {
         text-align: center;
         width: 60px;
         font-size: 1.5rem;
+        font-weight: normal;
+        border-radius: 5px;
+        border: 1px solid black;
+        margin: 0 5px;
       }
     }
   }
@@ -207,7 +195,7 @@ export default {
     border-radius: 20px;
     border: none;
     color: white;
-    background-color: #f5c03f;
+    background-color: #f5d269;
     cursor: pointer;
   }
 
@@ -237,14 +225,19 @@ export default {
 .divination-dialog {
   width: 70%;
   font-size: 16px;
-  color: #f5c03f;
+  color: #7f7093;
   text-align: center;
+
+  .q-card__actions > button {
+    background-color: #f5d269 !important;
+  }
 }
 
 .divination-notification {
   margin-top: 10px;
   font-size: 24px;
-  color: #f5c03f;
+  font-weight: bold;
+  color: #f5d269;
 }
 
 .divination-footer {
@@ -253,8 +246,7 @@ export default {
   bottom: 0;
   width: 100%;
   height: 50px;
-  background-color: #f4ede4;
-  color: white;
+  background-color: #d3cbe7;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -270,7 +262,17 @@ export default {
   margin: 0 10px;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (max-width: 1200px) {
+  .divination {
+    .divination-logo {
+      img {
+        max-width: 35%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
   .divination {
     .divination-logo {
       img {
@@ -281,6 +283,14 @@ export default {
 }
 
 @media screen and (max-width: 450px) {
+  .divination {
+    .divination-logo {
+      img {
+        max-width: 60%;
+      }
+    }
+  }
+
   .divination-dialog {
     width: 80%;
     font-size: 14px;
